@@ -2,18 +2,18 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
-    for(var i = 0; i < myObj.shop.length;i++)
+    for(var i = 0; i < myObj.trading.length;i++)
     {
 
     var innerDiv = document.createElement('div');
     innerDiv.className = `block`;
-    innerDiv.id = `block${myObj.shop[i].name}`;
+    innerDiv.id = `block${myObj.entry[i].name}`;
     document.body.appendChild(innerDiv);
 
     var tagName = document.createElement("h1");
-    var textName = document.createTextNode(myObj.shop[i].name);
+    var textName = document.createTextNode(myObj.entry[i].name);
     tagName.appendChild(textName); 
-    var elementName = document.getElementById(`block${myObj.shop[i].name}`);
+    var elementName = document.getElementById(`block${myObj.entry[i].name}`);
     elementName.appendChild(tagName);
 
 
@@ -21,24 +21,24 @@ xmlhttp.onreadystatechange = function() {
     var a = document.createElement('a');  
                   
     // Create the text node for anchor element. 
-    var link = document.createTextNode(`${myObj.shop[i].name} website`); 
+    var link = document.createTextNode(`${myObj.entry[i].name}'s email`); 
       
     // Append the text node to anchor element. 
     a.appendChild(link);  
       
     // Set the title. 
-    a.title = `${myObj.shop[i].name} website`;  
+    a.title = `${myObj.entry[i].name}'s email`;  
       
     // Set the href property. 
-    a.href = myObj.shop[i].website;  
+    a.href = myObj.entry[i].email;  
       
     // Append the anchor element to the body. 
     innerDiv.appendChild(a);  
 
     var tag = document.createElement("p");
-    var text = document.createTextNode(`takeout:${myObj.shop[i].takeout} gift card:${myObj.shop[i].giftCard} dine in:${myObj.shop[i].dineIn}`);
+    var text = document.createTextNode(`City :${myObj.entry[i].whichCityDoYouLiveIn} Needs :${myObj.entry[i].itemYouNeed} Can Give :${myObj.entry[i].itemYouAreWillingToGive}`);
     tag.appendChild(text); 
-    var element = document.getElementById(`block${myObj.shop[i].name}`);
+    var element = document.getElementById(`block${myObj.entry[i].name}`);
     element.appendChild(tag);
 
       }
