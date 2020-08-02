@@ -35,6 +35,20 @@ xmlhttp.onreadystatechange = function() {
     // Append the anchor element to the body. 
     innerDiv.appendChild(a);  
 
+
+    var cityTag = document.createElement("p");
+    var cityText = document.createTextNode(`City: ${myObj.entry[i].whichCityDoYouLiveIn} `);
+    cityTag.appendChild(cityText); 
+    var cityElement = document.getElementById(`block${myObj.entry[i].name}`);
+    cityElement.appendChild(cityTag);
+
+    var tag = document.createElement("p");
+    var text = document.createTextNode(`City: <br />${myObj.entry[i].whichCityDoYouLiveIn} Needs: <br />${myObj.entry[i].itemYouNeed} Can Give: <br />${myObj.entry[i].itemYouAreWillingToGive}`);
+    tag.appendChild(text); 
+    var element = document.getElementById(`block${myObj.entry[i].name}`);
+    element.appendChild(tag);
+
+
     var tag = document.createElement("p");
     var text = document.createTextNode(`City: <br />${myObj.entry[i].whichCityDoYouLiveIn} Needs: <br />${myObj.entry[i].itemYouNeed} Can Give: <br />${myObj.entry[i].itemYouAreWillingToGive}`);
     tag.appendChild(text); 
