@@ -36,7 +36,7 @@ xmlhttp.onreadystatechange = function() {
     innerDiv.appendChild(a);  
 
     var tag = document.createElement("p");
-    var text = document.createTextNode(`City :${myObj.entry[i].whichCityDoYouLiveIn} Needs :${myObj.entry[i].itemYouNeed} Can Give :${myObj.entry[i].itemYouAreWillingToGive}`);
+    var text = document.createTextNode(`City: \n${myObj.entry[i].whichCityDoYouLiveIn} Needs: \n${myObj.entry[i].itemYouNeed} Can Give: \n${myObj.entry[i].itemYouAreWillingToGive}`);
     tag.appendChild(text); 
     var element = document.getElementById(`block${myObj.entry[i].name}`);
     element.appendChild(tag);
