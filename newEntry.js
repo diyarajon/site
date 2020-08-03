@@ -50,7 +50,7 @@ xmlhttp.onreadystatechange = function() {
 
 
     var tag = document.createElement("p");
-    var text = document.createTextNode(`Can Give: <br />${myObj.entry[i].itemYouAreWillingToGive}`);
+    var text = document.createTextNode(`Can Give: ${myObj.entry[i].itemYouAreWillingToGive}`);
     tag.appendChild(text); 
     var element = document.getElementById(`block${myObj.entry[i].name}`);
     element.appendChild(tag);
