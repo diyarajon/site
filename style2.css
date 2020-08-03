@@ -6,6 +6,7 @@ body{
 
 .form{
     align-items: center;
+    grid-column: span 2;
 }
 
 
