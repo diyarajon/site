@@ -4,6 +4,10 @@ body{
     text-align: center;
 }
 
+.form{
+    align-items: center;
+}
+
 
 .heading{
     line-height: 1.6;
