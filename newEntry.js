@@ -43,14 +43,14 @@ xmlhttp.onreadystatechange = function() {
     cityElement.appendChild(cityTag);
 
     var tag = document.createElement("p");
-    var text = document.createTextNode(`City: <br />${myObj.entry[i].whichCityDoYouLiveIn} Needs: <br />${myObj.entry[i].itemYouNeed} Can Give: <br />${myObj.entry[i].itemYouAreWillingToGive}`);
+    var text = document.createTextNode(`Needs: ${myObj.entry[i].itemYouNeed}`);
     tag.appendChild(text); 
     var element = document.getElementById(`block${myObj.entry[i].name}`);
     element.appendChild(tag);
 
 
     var tag = document.createElement("p");
-    var text = document.createTextNode(`City: <br />${myObj.entry[i].whichCityDoYouLiveIn} Needs: <br />${myObj.entry[i].itemYouNeed} Can Give: <br />${myObj.entry[i].itemYouAreWillingToGive}`);
+    var text = document.createTextNode(`Can Give: <br />${myObj.entry[i].itemYouAreWillingToGive}`);
     tag.appendChild(text); 
     var element = document.getElementById(`block${myObj.entry[i].name}`);
     element.appendChild(tag);
